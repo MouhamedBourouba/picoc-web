@@ -1,21 +1,20 @@
-import { log } from "console";
 import PicoModule from "./picoc.js";
 
-function RunC(sourceCode) {
-  PicoModule().then((picoc) => {
-    picoc.FS.writeFile("./file.c", sourceCode);
+async function RunC(sourceCode) {
+  let result = {
+    stdout: "",
+    stderr: "",
+  };
 
-    const args = ["file.c"];
-    picoc.callMain(args);
+  let picoc = await PicoModule({
+    print: (txt) => (result.stdout += txt),
+    printErr: (txt) => (result.stderr += txt),
   });
+
+  picoc.FS.writeFile("/file.c", sourceCode);
+  picoc.callMain(["file.c"]);
+
+  return result;
 }
 
-let code = `
-#include<stdio.h>
-int main() {
-printf("hello form js nigga");
-return 0;
-}
-`;
-
-RunC(code);
+export default RunC;

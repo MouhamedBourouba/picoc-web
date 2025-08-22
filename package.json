@@ -1,0 +1,19 @@
+{
+  "name": "picoc-web",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "emmake make -j8 && rollup -c",
+    "clean": "emmake make clean && rm bundle.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.13.1",
+  "dependencies": {
+    "@rollup/plugin-terser": "^0.4.4",
+    "rollup": "^4.47.1"
+  }
+}

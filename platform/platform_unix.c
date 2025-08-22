@@ -72,7 +72,7 @@ int PlatformGetCharacter() {
 
 /* write a character to the console */
 void PlatformPutc(unsigned char OutCh, union OutputStreamInfo *Stream) {
-  putchar(OutCh);
+  printf("%c", OutCh);
 }
 
 /* read a file into memory */

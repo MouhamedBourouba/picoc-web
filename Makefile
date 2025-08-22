@@ -10,6 +10,7 @@ EMCC=-s MODULARIZE=1 \
   -s 'EXPORT_NAME="PicoModule"' \
   -s INVOKE_RUN=0 \
   -s NO_EXIT_RUNTIME=1 \
+	-s EXPORT_ES6=1 \
   -s SINGLE_FILE=1 \
   -s EXPORTED_RUNTIME_METHODS='["callMain", "FS"]' \
   -Os
