@@ -21,3 +21,9 @@ analysis.txt
 gmon.out
 tests/gmon.out
 .idea/
+
+bundle.js
+dist/
+node_modules/
+picoc.js
+pnpm-lock.yaml
