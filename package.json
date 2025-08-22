@@ -1,8 +1,9 @@
 {
   "name": "picoc-web",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Run C code in WebAssembly using PicoC + Emscripten.",
+  "main": "dist/bundle.umd.js",
+  "browser": "dist/bundle.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "emmake make -j8 && rollup -c",
