@@ -1,5 +1,6 @@
 #include "../interpreter.h"
 #include "../picoc.h"
+#include <stdio.h>
 
 // CHANGED
 #undef USE_READLINE
@@ -72,7 +73,7 @@ int PlatformGetCharacter() {
 
 /* write a character to the console */
 void PlatformPutc(unsigned char OutCh, union OutputStreamInfo *Stream) {
-  printf("%c", OutCh);
+  putchar(OutCh);
 }
 
 /* read a file into memory */

@@ -7,8 +7,12 @@ export async function RunC(sourceCode) {
   };
 
   let picoc = await PicoModule({
-    print: (txt) => (result.stdout += txt),
-    printErr: (txt) => (result.stderr += txt),
+    print: (txt) => {
+      result.stdout = `${result.stdout}${txt}\n`;
+    },
+    printErr: (txt) => {
+      result.stderr = `${result.stderr}${txt}\n`;
+    },
   });
 
   picoc.FS.writeFile("/file.c", sourceCode);
