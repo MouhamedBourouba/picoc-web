@@ -4,6 +4,10 @@ export default {
   input: "index.js",
   output: [
     {
+      file: "dist/bundle.esm.js",
+      format: "esm",
+    },
+    {
       file: "dist/bundle.js",
       format: "iife",
     },
