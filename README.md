@@ -11,6 +11,17 @@ This project ports [PicoC](https://github.com/jpoirier/picoc) to the web using E
 npm i picoc-web
 ```
 
+## Building
+### Requirments
+- emscripent toolchain available in you're current shell
+```bash
+git clone https://github.com/MouhamedBourouba/picoc-web/
+cd pioco-web
+npm install
+npm run build
+```
+Produces bundles in dist dir
+
 ##
  Usage
 
