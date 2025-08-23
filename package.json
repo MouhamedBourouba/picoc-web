@@ -1,6 +1,6 @@
 {
   "name": "picoc-web",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Run C code in the web using PicoC + Emscripten.",
   "main": "dist/bundle.umd.js",
   "browser": "dist/bundle.iife.js",
