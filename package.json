@@ -3,14 +3,26 @@
   "version": "1.0.2",
   "description": "Run C code in the web using PicoC + Emscripten.",
   "main": "dist/bundle.umd.js",
-  "browser": "dist/bundle.js",
+  "browser": "dist/bundle.iife.js",
   "module": "dist/bundle.esm.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "emmake make -j8 && rollup -c",
-    "clean": "emmake make clean && rm bundle.js"
+  "exports": {
+    ".": {
+      "import": "./dist/bundle.esm.js",
+      "require": "./dist/bundle.umd.js",
+      "browser": "./dist/bundle.iife.js"
+    }
   },
-  "keywords": [],
+  "scripts": {
+    "build": "emmake make -j8 && rollup -c",
+    "clean": "emmake make clean && rm dist -rf"
+  },
+  "keywords": [
+    "c",
+    "wasm",
+    "picoc",
+    "emscripten",
+    "webassembly"
+  ],
   "author": "",
   "license": "ISC",
   "packageManager": "pnpm@10.13.1",

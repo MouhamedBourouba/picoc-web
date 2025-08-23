@@ -1,6 +1,6 @@
 import PicoModule from "./picoc.js";
 
-async function RunC(sourceCode) {
+export async function RunC(sourceCode) {
   let result = {
     stdout: "",
     stderr: "",
@@ -12,6 +12,7 @@ async function RunC(sourceCode) {
   });
 
   picoc.FS.writeFile("/file.c", sourceCode);
+
   picoc.callMain(["file.c"]);
 
   return result;

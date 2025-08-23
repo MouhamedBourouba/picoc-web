@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>pico c example</title>
+  <script src="./dist/bundle.iife.js"></script>
+</head>
+
+<body>
+  <script>
+    // Run some C code
+    picocjs.RunC(`
+      #include <stdio.h>
+      int main() {
+        printf("Hello from PicoC!\\n");
+        return 0;
+      }
+    `).then(result => {
+      console.log("stdout:", result.stdout);
+      console.log("stderr:", result.stderr);
+    });
+  </script>
+</body>
+
+</html>

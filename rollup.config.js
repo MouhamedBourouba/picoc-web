@@ -2,14 +2,16 @@ import terser from "@rollup/plugin-terser";
 
 export default {
   input: "index.js",
+  treeshake: false,
   output: [
     {
       file: "dist/bundle.esm.js",
       format: "esm",
     },
     {
-      file: "dist/bundle.js",
+      file: "dist/bundle.iife.js",
       format: "iife",
+      name: "picocjs",
     },
     {
       file: "dist/bundle.umd.js",
