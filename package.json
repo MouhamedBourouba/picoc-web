@@ -5,6 +5,14 @@
   "main": "dist/bundle.umd.js",
   "browser": "dist/bundle.iife.js",
   "module": "dist/bundle.esm.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MouhamedBourouba/picoc-web.git"
+  },
+  "bugs": {
+    "url": "https://github.com/MouhamedBourouba/picoc-web/issues"
+  },
+  "homepage": "https://github.com/MouhamedBourouba/picoc-web#readme",
   "exports": {
     ".": {
       "import": "./dist/bundle.esm.js",
