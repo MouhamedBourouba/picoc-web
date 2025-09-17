@@ -6,6 +6,21 @@ PicoC interpreter compiled to WebAssembly for running C code in web browsers and
 
 This project ports [PicoC](https://github.com/jpoirier/picoc) to the web using Emscripten. PicoC is a very small C interpreter originally designed for embedded systems and scripting applications.
 
+## Installation
+``` bash
+npm i picoc-web
+```
+
+## Building
+``` bash
+git clone https://github.com/MouhamedBourouba/picoc-web
+cd picoc-web
+npm run build
+```
+note:
+ - Need's emscripten toolchain to be available in your shell
+
+
 ## Usage
 
 ```javascript
